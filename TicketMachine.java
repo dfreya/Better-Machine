@@ -100,11 +100,19 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
     public int empyMachine()
     {
-        int amountToRefound;
-        amountToRefound = total;
-        total = 0;
-        return amountToRefound;
+        if(balance == 0){        
+            int amountToRefound;
+            amountToRefound = total;
+            total = 0;
+            return amountToRefound;
+            }
+        else{
+            return -1;
+            
+        }
     }
+    
 }
